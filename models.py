@@ -27,12 +27,11 @@ class Campaign(SoftDeletableModel):
     # Detection information
     detection_status = models.CharField(max_length=100)
     reponsible = models.CharField(max_length=100)
-    #onset date is meaningful
+    # onset date is meaningful
     cVDPV2_notification_date = models.DateTimeField(null=True, blank=True)
     PV2_notification_date = models.DateTimeField(null=True, blank=True)
 
-    #risk assesment info
+    # risk assesment info
 
     def __str__(self):
         return "%s %d" % (self.EPID, self.OBR_name)
-
